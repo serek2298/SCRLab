@@ -1,0 +1,44 @@
+#include <time.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+void sigint_hand(int syg)
+{
+printf("sygnal int - program konczy dzialanie\n");
+exit(1);
+}
+void sigusr1_hand(int syg)
+{
+printf("signal usr1\n");
+}
+
+void sigusr2_hand(int syg)
+{
+for(int i=0;i<1000;i++)
+printf("sygnal usr2 i = 1000 \n");
+}
+
+void sigterm_hand(int syg)
+{
+printf("sygnal term  - nothing to do....\n");
+}
+
+int main()
+{
+struct timespec t;
+int i=1;
+t.tv_sec=0;
+t.tv_nsec=100;
+
+signal(SIGTERM,sigterm_hand);
+signal(SIGUSR1,sigusr1_hand);
+signal(SIGUSR2,sigusr2_hand);
+signal(SIGINT,sigint_hand);
+ while(1)
+    {
+    nanosleep(&t,0);
+    i++;
+    }
+return 0;
+}
