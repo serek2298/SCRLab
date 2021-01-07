@@ -1,0 +1,6 @@
+zad2
+program helo32 tworzy 32 wątki, nastepnie każdy z nich czeka 3 sekundy, a potem printuje nam sygnał zakonczenia wątku, kolejność ta jest losowa.
+zad3
+Problem polegał na przekazywaniu danych w momencie wykonywania funkcji rozpoczęte były wszystkie wątki co za tym idzie,t=8 i rozpoczęło się 8 takich samych wątków.
+Aby temu zapobiec niezbędne jest utworzenie dodatkowej zmiennej w main, która odpowiedzialna będzie za przechowywanie wartości do zakończenia programu. 
+np int it[NUM_THREADS]; i tuż przed wywołaniem wątku nadać odpowiednią wartość.
