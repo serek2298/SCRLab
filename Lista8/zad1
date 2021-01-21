@@ -1,0 +1,5 @@
+-Program oblicza sumę iloczynów kolejnych par elementów tablic w strukturze oraz zwraca czas jaki to zajęło. Program nie tworzy nowych wątków, 
+można przyspieszyć program dodając wątki jednak z odpowiednimi restrykcjami, aby nie wystąpił bug jak w bug6.c
+
+-bug6.c za każdym  razem otrzymujamy inny wynik ponieważ, korzystając ze zmiennych globalnych należy pamiętać iż wątki nie muszą i nie są wykonywane jeden po drugim,
+aby program naprawić należy się upewnić ze wątki są wykonywane jeden po  zakończeniu poprzedniego np funkcją sleep.
