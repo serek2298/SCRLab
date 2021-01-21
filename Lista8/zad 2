@@ -1,0 +1,2 @@
+dorprod_mutex.c -> jest szybszy, ale wymaga więcej pamięci do działania.
+arrayloops.c -> wolniejszy, jednakże zużywa mniej pamięci.
